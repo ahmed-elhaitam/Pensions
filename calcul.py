@@ -49,13 +49,16 @@ sum = []
 for i in range(23):
     a = values[i] * list[i] * 100 / 6
     sum.append(a)
-somme = np.sum(sum)
+
+sommes = np.sum(sum)
+somme=sommes*0.02/12
+
 
 # Entrée pour le calcul de P2
 st.subheader("Calcul de Pension")
 val = st.number_input("P1", value=1.0, step=0.1)
-PP = coefficient[0] * val / 12
-
+PP = (list[0] * val )/ 12
+somme=somme+PP
 # Affichage des résultats
-st.success(f"💰 Le somme est : **{somme:.2f}**")
-st.info(f"🧮 Pension calculée : **{PP:.2f}**")
+st.success(f"🧮 Pension calculée : **{somme:.2f}**")
+st.info(f"💰 Le somme est : **{PP:.2f}**")
