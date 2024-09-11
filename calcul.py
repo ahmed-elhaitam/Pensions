@@ -60,5 +60,5 @@ val = st.number_input("P1", value=1.0, step=0.1)
 PP = (list[0] * val )/ 12
 somme=somme+PP
 # Affichage des résultats
-st.success(f"🧮 Pension calculée : **{somme:.2f}**")
-st.info(f"💰 Le somme est : **{PP:.2f}**")
+st.success(f"💰 La somme est(P1+P2): **{somme:.2f}**")
+st.info(f"🧮 Pension calculée(P1)  : **{PP:.2f}**")
