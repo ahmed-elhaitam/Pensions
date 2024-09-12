@@ -58,7 +58,9 @@ somme=sommes*0.02/12
 st.subheader("Calcul de Pension")
 val = st.number_input("P1", value=1.0, step=0.1)
 PP = (list[0] * val )/ 12
-somme=somme+PP
+somme1=somme+PP
 # Affichage des résultats
-st.success(f"💰 La somme est(P1+P2): **{somme:.2f}**")
+
+st.success(f"💰 La somme est(P1+P2): **{somme1:.2f}**")
 st.info(f"🧮 Pension calculée(P1)  : **{PP:.2f}**")
+st.info(f"🧮 Pension calculée(P2)  : **{somme:.2f}**")
