@@ -41,7 +41,7 @@ cols = st.columns(3)  # Diviser l'interface en colonnes
 
 for i in range(23):
     with cols[i % 3]:
-        value = st.number_input(f"Contribution année {i + 2002}:", value=1.0, step=1)
+        value = st.number_input(f"Contribution année {i + 2002}:", value=1.0, step=1.0)
         values.append(value)
 
 # Calculs
