@@ -5,34 +5,23 @@ import numpy as np
 st.set_page_config(page_title="Calculateur de Pension", page_icon="📊", layout="centered")
 
 # Fonction pour définir le mode (clair ou sombre)
-def set_theme(is_dark_mode):
-    if is_dark_mode:
-        return """
+is_dark_mode = st.get_theme() == "dark"
+
+# Application du style en fonction du mode
+if is_dark_mode:
+    st.markdown("""
         <style>
-        .main {background-color: #1e1e1e; color: #ffffff; font-family: 'Arial';}
+        .main {font-family: 'Arial';}
         h1, h2, h3 {color: #3498db;}
-        .css-1aumxhk {background-color: #2c3e50;}
-        .stTextInput > div > div > input {background-color: #333333; color: #ffffff;}
-        .stNumberInput > div > div > input {background-color: #333333; color: #ffffff;}
-        .stSelectbox > div > div > select {background-color: #333333; color: #ffffff;}
         </style>
-        """
-    else:
-        return """
+        """, unsafe_allow_html=True)
+else:
+    st.markdown("""
         <style>
-        .main {background-color: #f0f4f8; color: #333333; font-family: 'Arial';}
+        .main {font-family: 'Arial';}
         h1, h2, h3 {color: #2c3e50;}
-        .css-1aumxhk {background-color: #3498db;}
         </style>
-        """
-
-# État pour le mode sombre
-if 'dark_mode' not in st.session_state:
-    st.session_state.dark_mode = False
-
-# Switch pour le mode sombre
-dark_mode = st.sidebar.checkbox("Mode sombre", value=st.session_state.dark_mode)
-
+        """, unsafe_allow_html=True)
 # Mise à jour du thème
 st.markdown(set_theme(dark_mode), unsafe_allow_html=True)
 
