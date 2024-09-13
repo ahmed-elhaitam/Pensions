@@ -4,24 +4,13 @@ import numpy as np
 # Personnalisation de l'apparence
 st.set_page_config(page_title="Calculateur de Pension", page_icon="📊", layout="centered")
 
-# Fonction pour définir le mode (clair ou sombre)
-is_dark_mode = st.get_theme() == "dark"
-
-# Application du style en fonction du mode
-if is_dark_mode:
-    st.markdown("""
-        <style>
-        .main {font-family: 'Arial';}
-        h1, h2, h3 {color: #3498db;}
-        </style>
-        """, unsafe_allow_html=True)
-else:
-    st.markdown("""
-        <style>
-        .main {font-family: 'Arial';}
-        h1, h2, h3 {color: #2c3e50;}
-        </style>
-        """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+    .main {font-family: 'Arial';}
+    h1, h2, h3 {color: #3498db;}
+    .stAlert {background-color: rgba(52, 152, 219, 0.1);}
+    </style>
+    """, unsafe_allow_html=True)
 # Mise à jour du thème
 st.markdown(set_theme(dark_mode), unsafe_allow_html=True)
 
