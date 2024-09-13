@@ -7,10 +7,10 @@ st.set_page_config(page_title="Calculateur de Pension", page_icon="📊", layout
 # Couleurs du thème
 st.markdown("""
     <style>
-        .main {background-color: #585641; font-family: 'Arial';}
-        h1 {color: #336699;}
-        .css-1aumxhk {background-color: #336699;}
-    </style>
+    .main {background-color: #f0f4f8; font-family: 'Arial';}
+    h1 {color: #2c3e50;}
+    .css-1aumxhk {background-color: #3498db;}
+</style>
     """, unsafe_allow_html=True)
 
 # Titre de l'application
@@ -41,7 +41,7 @@ cols = st.columns(3)  # Diviser l'interface en colonnes
 
 for i in range(23):
     with cols[i % 3]:
-        value = st.number_input(f"Contribution année {i + 2002}:", value=1.0, step=0.1)
+        value = st.number_input(f"Contribution année {i + 2002}:", value=1.0, step=1)
         values.append(value)
 
 # Calculs
