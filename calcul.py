@@ -12,7 +12,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 # Mise à jour du thème
-st.markdown(set_theme(dark_mode), unsafe_allow_html=True)
+#st.markdown(set_theme(dark_mode), unsafe_allow_html=True)
 
 # Mise à jour de l'état de session
 st.session_state.dark_mode = dark_mode
